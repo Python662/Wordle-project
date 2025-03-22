@@ -1,0 +1,18 @@
+
+word_dict = {}
+
+
+with open('Mbox-short.txt', 'r') as file:
+    
+    for word in file:
+        
+        word = word.strip()
+        
+        word_dict[word] = True
+
+word_to_check = "Message" 
+
+if word_to_check in word_dict:
+    print(f"The word '{word_to_check}' exists in the dictionary.")
+else:
+    print(f"The word '{word_to_check}' does not exist in the dictionary.")
